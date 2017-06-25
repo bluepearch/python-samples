@@ -12,7 +12,7 @@
 * [Pluralsight](http://www.pluralsight.com) - lots of courses on python
 * [Exercism.io](http://exercism.io/) - way to practice code
 * [CodeWars](http://www.codewars.com) - more practice 
-
+* [Python Koans](https://github.com/gregmalcolm/python_koans) - tests you complete 
 Meetups
 * [PyLadies ATX](https://www.meetup.com/PyLadies-ATX/)
 * [Austin PyData](https://www.meetup.com/PyData-Austin/)
