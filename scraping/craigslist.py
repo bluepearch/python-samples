@@ -9,16 +9,10 @@ ads_data = soup.find_all("a", class_="result-title")
 ads = set(ads_data)
 
 def contains_chair(s):
-  return "chair" in s.string
-
-def contains_Chair(s):
-  return "Chair" in s.string
-
+  return ("chair" in s.string) or ("Chair" in s.string)
 
 filtered_ads_chair = list(filter(contains_chair, ads))
-filtered_ads_Chair = list(filter(contains_Chair, ads))
 
-total_chairs = filtered_ads_chair + filtered_ads_Chair
 
-for ad in total_chairs:
+for ad in filtered_ads_chair:
     print(ad.string)
