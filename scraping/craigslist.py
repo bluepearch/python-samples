@@ -1,21 +1,24 @@
-from bs4 import BeautifulSoup
-import urllib2
+from bs4 import BeautifulSoup as parser
+from urllib.request import urlopen
 
-response = urllib2.urlopen("https://austin.craigslist.org/search/ata")
+response = urlopen("https://austin.craigslist.org/search/ata")
 html = response.read()
-soup = BeautifulSoup(html, "html.parser")
+soup = parser(html, "html.parser")
 ads_data = soup.find_all("a", class_="result-title")
 
 ads = set(ads_data)
 
-# elem for elem in li if len(elem) > 1 
-
 def contains_chair(s):
   return "chair" in s.string
 
-filtered_ads = filter(contains_chair, ads)
+def contains_Chair(s):
+  return "Chair" in s.string
 
-for ad in filtered_ads:
-    print ad.string
 
-#result-title hdrlnk
+filtered_ads_chair = list(filter(contains_chair, ads))
+filtered_ads_Chair = list(filter(contains_Chair, ads))
+
+total_chairs = filtered_ads_chair + filtered_ads_Chair
+
+for ad in total_chairs:
+    print(ad.string)
