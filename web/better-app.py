@@ -1,7 +1,10 @@
-from flask import Flask, render_template
+from flask import Flask
 app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return render_template('hello.html')
+    return "Hello World!"
 
+@app.route("/bye")
+def bye():
+    return "Bye there"
