@@ -10,7 +10,7 @@ Annual interest Rate: 3.4
 
 
 ****************************************
-Your payments are: 181a month for 5 years
+Your payments are: 181 a month for 5 years
 Welcome to being in debt :(
 ****************************************
 ```

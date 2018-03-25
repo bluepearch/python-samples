@@ -13,6 +13,6 @@ monthlyPayments = loan * (interest * (1 + interest) ** numberOfPayments) / ((1 +
 
 print("\n\n")
 print("*" * 40)
-print("Your payments are: " + str(round(monthlyPayments)) + "a month for " + str(years) + " years")
+print("Your payments are: " + str(round(monthlyPayments)) + " a month for " + str(years) + " years")
 print("Welcome to being in debt :(")
 print("*" * 40)
