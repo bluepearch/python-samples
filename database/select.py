@@ -2,8 +2,6 @@
 # pip install psycopg2-binary
 
 
-# Example using the psql program
-# insert into recipes (name, url, source) values ('Deep Fried Spaghetti ', 'www.foodnetwork.com/id=5431233', 'Food Network');
 
 # recipes=# select * from recipes;
 # id |         name          |              url               |    source    | created-at
@@ -15,10 +13,7 @@
 import psycopg2
 
 
-try:
-    conn = psycopg2.connect("dbname='recipes' user='nstowe' host='localhost' password=''")
-except:
-    print("I am unable to connect to the database")
+conn = psycopg2.connect("dbname='recipes' user='nstowe' host='localhost' password=''")
 
 cur = conn.cursor()
 
